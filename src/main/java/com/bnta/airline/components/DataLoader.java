@@ -23,6 +23,9 @@ public class DataLoader implements ApplicationRunner {
         Passenger passenger1 = new Passenger("Zaiyad", "1234");
         passengerRepository.save(passenger1);
 
+        Passenger passenger2 = new Passenger("Naruto", "5239");
+        passengerRepository.save(passenger2);
+
         Flight flight1 = new Flight("Mumbai",10,"5th of May","15:00");
         flightRepository.save(flight1);
 
