@@ -1,5 +1,6 @@
 package com.bnta.airline.components;
 
+import com.bnta.airline.models.Flight;
 import com.bnta.airline.models.Passenger;
 import com.bnta.airline.repositories.FlightRepository;
 import com.bnta.airline.repositories.PassengerRepository;
@@ -19,7 +20,14 @@ public class DataLoader implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args){
-        Passenger passenger = new Passenger("Zaiyad",)
+        Passenger passenger1 = new Passenger("Zaiyad", "1234");
+        passengerRepository.save(passenger1);
+
+        Flight flight1 = new Flight("Mumbai",10,"5th of May","15:00");
+        flightRepository.save(flight1);
+
+        Flight flight2 = new Flight("Bangladesh",10,"2nd of April","12:00");
+        flightRepository.save(flight2);
 
     }
 }
