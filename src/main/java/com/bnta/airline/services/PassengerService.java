@@ -1,5 +1,6 @@
 package com.bnta.airline.services;
 
+import com.bnta.airline.models.Flight;
 import com.bnta.airline.models.Passenger;
 import com.bnta.airline.repositories.FlightRepository;
 import com.bnta.airline.repositories.PassengerRepository;
@@ -23,4 +24,7 @@ public class PassengerService {
         return passengerRepository.findAll();
     }
 
+    public Passenger findPassenger(Long id) {
+        return passengerRepository.findById(id).get();
+    }
 }
